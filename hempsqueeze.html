@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <style>
+        body{padding: 0; margin: 0; font-family: Roboto, sans-serif;}
+        .hs-nav{
+            width:100%;
+            background-color: white;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            z-index: 5;
+        }
+        .hs-links{
+            width: 40%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .hs-links ul {
+            list-style-type: none;
+        }
+        .hs-links li {display: inline; margin: 20px;}
+        .hs-links a {
+            text-decoration: none;
+            color: black;
+            font-size: 1.2em;
+            font-weight: bold;
+            
+        }
+        .hs-logo{
+            padding-left: 10%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .hs-logo img {margin: 20px;}
+        #hs-plants {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            height:300px;
+            width:100vw;
+            background-image: url("/hempsqueeze/background-plants.png");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+    
+        }
+        #hs-plants h1, #hs-plants h2, #hs-plants h3{ text-shadow: 2px 2px 4px #000000;}
+        #hs-plants h1 {font-size: 7em; font-weight: 700;text-align: right; margin: 0 40px 0 0 }
+        #hs-plants h2 {font-size: 3em; margin: 0; line-height: 1}
+        .hs-left-30 {width: 30%; margin-top: 70px;}
+        .hs-right-50 {width: 50%; margin-top: 84px;}
+        .hs-right-50 h3{font-size: 2em}
+        #hs-products{
+            background: linear-gradient(0deg, rgba(126,126,126,1) 35%, rgba(197,197,197,1) 100%);
+            height: 300px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center
+        }
+        .hs-products {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+            max-width: 1150px;
+        }
+        #hs-products img{ display: inline; margin: 0px 30px 0 30px; height: 330px; transform: translateY(-50px)}
+        #hs-natural {
+            width: 100%;
+            height: 400px;
+            background-image: url("/hempsqueeze/barbell.png");
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+        #hs-life{
+            height: 375px;
+            width: 100%;
+            background: linear-gradient(0deg, #184483, #1b4f9a);
+            padding: 20px;
+        }
+        #hs-life h1 {font-size: 4.5em; color: white; text-align: center; margin-top: 0}
+        #hs-infused{
+            background-color: #404040;
+            height: 125px;
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: center; align-content: center;}
+        #hs-infused h2{color: white;text-align: center; font-size:2em;max-width: 900px;font-weight: 600}
+        .hs-infused-inner{max-width: 980px; padding: 0; display:inline-block;}
+        #hs-about{
+            height: 400px;
+            width: 100%;
+            background-image: url("/hempsqueeze/pushups.png");
+            background-size: cover;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .hs-button {
+            background-color: #1b4f9a;
+            color: white;
+            padding: 10px 40px;
+            border-radius: 20px;
+            text-align: center;
+            display: inline;
+        }
+
+        .hs-center{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .hs-center-top{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+        }        
+        .hs-center-bottom {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .hs-center-bottom h2 {margin: 0}
+        .hs-products-h2{font-size: 3em;font-weight: 900}
+        .hs-products-light {font-size: 3em;font-weight:300;text-align: center;}
+        .sticky {position: fixed; top:0}
+        .hs-coming-soon {display: flex; justify-content: center;}
+        .hs-coming-soon h2 {transform: translateY(73px)}
+        .hs-natural-flex, .hs-life-flex {display: flex; flex-direction: row; justify-content: center}
+        .hs-natural-left img {height: 300px; border: 5px solid white}
+        .hs-life-right img {height: 200px; border: 5px solid white}
+        .hs-natural-right, .hs-life-left {max-width: 460px; color: white; padding: 0 0 0 50px}
+        .hs-natural-right h2 {font-size: 2.2em; margin-top:0}
+        .hs-natural-right p, .hs-life-left p {font-size: 1.5em; }
+        #hs-life h1{color: white; text-align: center; margin-bottom: 20px}
+        #footer {height:300px}
+        .hs-about-circle1, .hs-about-circle2, .hs-about-circle3 {
+            border-radius: 50%; border: 5px solid white; height: 270px;
+            width: 270px; margin: 50px; background-size: 270px 270px;
+            background-position: center; display: flex; flex-direction: row; justify-content: center; align-items: center;
+        }
+        .hs-about-circle1 h2, .hs-about-circle3 h2 {color: white;text-align: center;font-size: 2em;}
+        .hs-about-circle2 img {height:210px; transform:translateX(-10px)       }
+        .hs-about-circle1 {
+            background-image: url("/hempsqueeze/circle1.png");
+        }
+        .hs-about-circle2 {
+            background-image: url("/hempsqueeze/circle2.png");
+        }
+        .hs-about-circle3{
+            background-image: url("/hempsqueeze/circle3.png")
+        }
+    </style>
+    <div class="hs-nav">
+        <div class="hs-logo">
+            <img alt="Hemp Squeeze Logo" src="/hempsqueeze/Hempsqueeze-logo.png"/>
+            <img alt="Hemp Squeeze" src="/hempsqueeze/HempsqueezeTM.png"/>
+        </div>
+        <div class="hs-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#hs-plants">Our Products</a></li>
+                <li><a href="#hs-infused">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="hs-plants">
+        <div class="hs-left-30">
+            <h1>NEW</h1>
+        </div>
+        <div class="hs-right-50">
+            <h2>CBD INFUSED<br>COMPRESSION SLEEVE</h2>
+            <h3>150mg CBD | TCH Free</h3>
+        </div>
+    </div>
+    <div id="hs-products">
+        <div class="hs-products">
+            <img alt="Arm Sleeve" src="/hempsqueeze/arm.png"/>
+            <div class="hs-center">
+                <div class="hs-center-top">
+                    <h2 class="hs-button">KNEE</h2>
+                    <h2 class="hs-button">ARM</h2>
+                </div>
+                <div class="hs-center-bottom">
+                    <h2 class="hs-products-h2">100% USA GROWN</h2> 
+                    <h2 class="hs-products-light">HEMP EXTRACT</h2>
+                    <div class="hs-coming-soon"><h2 class="hs-button">COMING SOON!</h2></div>       
+                </div>
+            </div>
+            <img alt="Leg Sleeve" src="hempsqueeze/knee.png"/>
+        </div>
+        
+    </div>
+    <div id="hs-natural">
+        
+        <div class="hs-natural-flex">
+            <div class="hs-natural-left">
+                <img alt="runner" src="/hempsqueeze/runner.png"/>
+            </div>
+            <div class="hs-natural-right">
+                <h2>The Natural Choice for<br>a Healthy Lifestyle</h2>
+                <p><strong>HOW IT WORKS:</strong><br>The Sleeve is made with Nufabrix technology, a patented, proprietary biomaterial platform that embeds CBD (THC FREE) into the actual yarn of the sleeve.</p>
+            </div>
+        </div>
+    </div>
+    <div id="hs-life">
+        <h1>LIFE HURTS, HEMP HELPS!</h1>
+        <div class="hs-life-flex">
+            <div class="hs-life-left">
+                <p><strong>BENEFITS:</strong><br>The Hemp Squeeze Sleeve provides support, improved
+                circulation, and zoned compression with the benefits of 150mg active CBD that 
+            remain effective after multiple (up to 25) washes.</p>
+            </div>
+            <div class="hs-life-right">
+                <img alt="Mountain Bikers" src="hempsqueeze/bikers.png"/>
+            </div>
+        </div>
+    </div>
+    <div id="hs-infused">
+            <h2>Infused with hemp extract, including 150 mg of CBD and other beneficial cannabinoids (THC Free).</h2>
+        
+    </div>
+
+    <div id="hs-about">
+        <div class="hs-about-circle1"><h2>HEMP<br>AND THE<br>HUMAN<br>BODY</h2></div>
+        <div class="hs-about-circle2"> <img alt="Leg Sleeve" src="/hempsqueeze/leg group.png"></div>
+        <div class="hs-about-circle3"><h2>HISTORY<br>OF<br>HEMP</h2></div>
+    </div>
+    <div id="footer"></div>
+    <script>
+        var header = document.querySelector(".hs-nav");
+        window.onscroll = function(){navFunction()};
+        function navFunction(){
+            if(window.pageYOffset > 1){
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        
+        }}
+    </script>
+</body>
+</html>
