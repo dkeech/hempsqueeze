@@ -93,7 +93,7 @@
             margin: 0 auto;
         }
         .hs-coming-soon {
-            display: inline; width: 350px; margin: 0 auto; transform: translateY(-60px);
+            display: inline; width: 330px; margin: 0 auto; transform: translateY(-60px);
         }
         #hs-products img{ display: inline; margin: 0px 30px 0 30px; height: 330px; transform: translateY(-50px)}
         #hs-products * {text-align: center;}
@@ -186,12 +186,14 @@
         .hs-about-circle3{
             background-image: url("/hempsqueeze/circle3.png")
         }
+        #hs-about.row {margin: 0; }
         #footer{display: flex; flex-direction:column; justify-content: center;
-        align-items:center;background-image: url(https://everythinghempstore.com/wp-content/plugins/goodlayers-core/include/images/pattern/pattern-8.png); */
-    background-repeat: repeat;
-    background-position: center center;
-    opacity: 1;
-    height: 600px;
+        align-items:center;
+        background-image: url(https://everythinghempstore.com/wp-content/plugins/goodlayers-core/include/images/pattern/pattern-8.png); 
+        background-repeat: repeat;
+        background-position: center center;
+        opacity: 1;
+        height: 600px;
         }
         #footer h2{text-align:center; font-size: 3em; font-weight: 300;text-transform: uppercase;color: black;}
         .hs-footer-form{max-width: 350px;}
@@ -216,18 +218,26 @@
             border:none;
 
         }
+        @media only screen and (max-width: 900px){
+            #hs-products {height: auto;}
+            .hs-coming-soon{transform: translateY(0)}
+            #hs-natural, #hs-life {height: auto;}
+            #hs-life h1 {font-size: 2.5em;}
+
+        }
+        
         @media only screen and (max-width: 768px){
             #hs-plants {height: 380px;}
             #hs-plants *, #hs-plants h1 {text-align: center;}
-
+            #hs-products img {height: auto; transform:translateY(0); margin-bottom: 20px;}
+            #hs-products img:nth-of-type(2){ transform:translateX(-100px);}
+            
+            .leg-sleeve {transform: translateX(-25px);}
+            #hs-plants h2 {font-size: 2em;}
+            #hs-plants h1{margin: 0; text-align: center;}
         }
-        @media only screen and (max-width: 900px){
-            #hs-products {height: 380px;}
-            .hs-coming-soon{transform: translateY(0)}
-            #hs-natural, #hs-life {height: auto}
-            #hs-life h1 {font-size: 2.5em}
-
-        }
+        @media (max-width: 450px){.leg-sleeve {transform: translateX(0);}.hs-coming-soon{width: 200px}
+        .hs-nav-row {width: 75%}}
         @media (min-width: 768px) and (max-width: 1150px){
             .hs-about-circle1, .hs-about-circle2, .hs-about-circle3 {
             height: 200px;
@@ -262,7 +272,7 @@
     </div>
     <div id="hs-products">
         <div class="hs-products row">
-            <div class="col-6 col-md-3"><img alt="Arm Sleeve" src="/hempsqueeze/arm.png" class="img-fluid"/></div>
+            <div class="col-12 col-sm-6 col-md-3"><img alt="Arm Sleeve" src="/hempsqueeze/arm.png" class="img-fluid"/></div>
             <div class="hs-center d-none d-md-block col-md-6">
                 <div class="hs-center-top">
                     <h2 class="hs-button">ARM</h2>
@@ -274,7 +284,7 @@
                          
                 </div>
             </div>
-            <div class="col-6 col-md-3"><img alt="Leg Sleeve" src="hempsqueeze/knee.png" class="img-fluid"/></div>
+            <div class="col-12 col-sm-6 col-md-3 leg-sleeve"><img alt="Leg Sleeve" src="hempsqueeze/knee.png" class="img-fluid leg-sleeve"/></div>
         </div>
         <div class="col-12"><h2 class="hs-button hs-coming-soon">COMING SOON!</h2> </div>
     </div>
@@ -303,7 +313,7 @@
             remain effective after multiple (up to 25) washes.</p>
             </div>
             <div class="hs-life-right">
-                <img alt="Mountain Bikers" src="hempsqueeze/bikers.png"/>
+                <img class="img-fluid" alt="Mountain Bikers" src="hempsqueeze/bikers.png"/>
             </div>
         </div>
     </div>
