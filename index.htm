@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hemp Squeeze</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153617086-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-153617086-1');
+</script>
+</head>
+<body>
+    <style>
+        @font-face {
+            font-family: 'AvenirNext';
+            src: url('hempsqueeze/AvenirNextLTPro-Regular.otf');
+        }
+        
+        body{padding: 0; margin: 0; font-family: AvenirNext, sans-serif;}
+        .hs-nav{
+            width:100%;
+            max-width: 100%;
+            background-color: white;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            z-index: 5;
+        }
+        .hs-nav-row{width: 100%; justify-content: space-around; align-items: center;}
+        .hs-links ul {
+            list-style-type: none;
+            padding-inline-start: 0;
+        }
+        .hs-links li {display: inline; margin: 20px;}
+        .hs-links a {
+            text-decoration: none;
+            color: black;
+            font-size: 1.2em;
+            font-weight: bold;
+            
+        }
+        .hs-logo{
+            /* padding-left: 10%; */
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        .hs-logo img {margin: 20px;}
+        #hs-plants {
+            display: flex;
+            align-items: center;
+            height:300px;
+            /* width:100vw; */
+            background-image: url("/hempsqueeze/background-plants.png");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+    
+        }
+        #hs-plants .row {width: 100%}
+        #hs-plants h1, #hs-plants h2, #hs-plants h3{ text-shadow: 2px 2px 4px #000000;}
+        #hs-plants h1 {font-size: 7em; font-weight: 700;text-align: right; margin: 0 40px 0 0 }
+        #hs-plants h2 {font-size: 3em; margin: 0; line-height: 1}
+        /* .hs-left-30 {width: 30%; margin-top: 70px;}
+        .hs-right-50 {width: 50%; margin-top: 84px;} */
+        .hs-right-50 h3{font-size: 2em}
+        #hs-products{
+            background: linear-gradient(0deg, rgba(126,126,126,1) 35%, rgba(197,197,197,1) 100%);
+            height: 320px;
+            /* display: flex;
+            flex-direction: row;
+            justify-content: center */
+        }
+        .hs-products {
+            /* display: flex;
+            flex-direction: row;
+            justify-content: center; */
+            padding-top: 20px;
+            max-width: 1150px;
+            margin: 0 auto;
+        }
+        .hs-coming-soon {
+            display: inline; width: 350px; margin: 0 auto; transform: translateY(-60px);
+        }
+        #hs-products img{ display: inline; margin: 0px 30px 0 30px; height: 330px; transform: translateY(-50px)}
+        #hs-products * {text-align: center;}
+        #hs-natural {
+            /* width: 100%; */
+            height: 400px;
+            background-image: url("/hempsqueeze/barbell.png");
+            background-size: cover;
+            padding: 50px 0
+        }
+        #hs-natural .row {max-width: 1150px; margin: 0 auto;}
+        #hs-life{
+            height: auto;
+            /* width: 100%; */
+            background: linear-gradient(0deg, #184483, #1b4f9a);
+            padding: 20px;
+        }
+        #hs-life h1 {font-size: 4.5em; color: white; text-align: center; margin-top: 0}
+        #hs-infused{
+            background-color: #404040;
+            height: auto;
+            /* width: 100%; */
+            padding: 20px;
+            display: flex;
+            justify-content: center; align-content: center;}
+        #hs-infused h2{color: white;text-align: center; font-size:2em;max-width: 900px;font-weight: 600}
+        .hs-infused-inner{max-width: 980px; padding: 0; display:inline-block;}
+        #hs-about{
+            height: auto;
+            background-image: url("/hempsqueeze/pushups.png");
+            background-size: cover;
+        }
+        #hs-about.row {justify-content: center;}
+        #hs-about .col-md-3 {display: flex; justify-content: center;}
+        #hs-about a {text-decoration: none;}
+        .hs-button {
+            background-color: #1b4f9a;
+            color: white;
+            padding: 10px 40px;
+            border-radius: 20px;
+            text-align: center;
+            display: inline;
+        }
+
+        .hs-center{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .hs-center-top{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+        }        
+        .hs-center-bottom {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .hs-center-bottom h2 {margin: 0}
+        .hs-products-h2{font-size: 3em;font-weight: 900}
+        .hs-products-light {font-size: 3em;font-weight:300;text-align: center;}
+        .sticky {position: fixed; top:0}
+        .hs-coming-soon {display: flex; justify-content: center;}
+        .hs-coming-soon h2 {transform: translateY(73px)}
+        .hs-natural-flex, .hs-life-flex { justify-content: center; }
+
+        .hs-natural-left img {max-height: 300px; border: 5px solid white}
+        .hs-life-right img {height: 200px; border: 5px solid white}
+        .hs-natural-right {color: white;}
+        .hs-life-left {max-width: 460px; color: white; padding: 0 0 0 50px}
+        .hs-natural-right h2 {font-size: 2.2em; margin-top:0}
+        .hs-natural-right p, .hs-life-left p {font-size: 1.5em; }
+        #hs-life h1{color: white; text-align: center; margin-bottom: 20px}
+        #footer {height:300px}
+        .hs-about-circle1, .hs-about-circle2, .hs-about-circle3 {
+            border-radius: 50%; border: 5px solid white; height: 270px;
+            width: 270px; margin: 50px; background-size: 270px 270px;
+            background-position: center; display: flex; flex-direction: row; justify-content: center; align-items: center;
+        }
+        .hs-about-circle1 h2, .hs-about-circle3 h2 {color: white;text-align: center;font-size: 2em;}
+        .hs-about-circle2 img {height:210px; transform:translateX(-10px)       }
+        .hs-about-circle1 {
+            background-image: url("/hempsqueeze/circle1.png");
+        }
+        .hs-about-circle2 {
+            background-image: url("/hempsqueeze/circle2.png");
+        }
+        .hs-about-circle3{
+            background-image: url("/hempsqueeze/circle3.png")
+        }
+        #footer{display: flex; flex-direction:column; justify-content: center;
+        align-items:center;background-image: url(https://everythinghempstore.com/wp-content/plugins/goodlayers-core/include/images/pattern/pattern-8.png); */
+    background-repeat: repeat;
+    background-position: center center;
+    opacity: 1;
+    height: 600px;
+        }
+        #footer h2{text-align:center; font-size: 3em; font-weight: 300;text-transform: uppercase;color: black;}
+        .hs-footer-form{max-width: 350px;}
+        #footer p {font-size: 1.1em; text-align: center;}
+        #footer input:not([type="button"]):not([type="submit"])  {
+            border-color: #d7d7d7;
+            color: #4e4e4e;
+            padding: 20px 10px;
+            text-transform:uppercase;
+            text-align:center; 
+            width: 360px;
+        }
+        #footer input[type="submit"] {
+            background-color: #2b7844;
+            color: white;
+            padding: 10px 20px;
+            text-transform: uppercase;
+        }
+        iframe {
+            width: 100%;
+            height: 500px;
+            border:none;
+
+        }
+        @media only screen and (max-width: 768px){
+            #hs-plants {height: 380px;}
+            #hs-plants *, #hs-plants h1 {text-align: center;}
+
+        }
+        @media only screen and (max-width: 900px){
+            #hs-products {height: 380px;}
+            .hs-coming-soon{transform: translateY(0)}
+            #hs-natural, #hs-life {height: auto}
+            #hs-life h1 {font-size: 2.5em}
+
+        }
+        @media (min-width: 768px) and (max-width: 1150px){
+            .hs-about-circle1, .hs-about-circle2, .hs-about-circle3 {
+            height: 200px;
+            width: 200px; margin: 50px; background-size: 200px 200px;
+        }
+        }
+    </style>
+    <div class="hs-nav container">
+        <div class="row hs-nav-row">
+        <div class="hs-logo col-md-6">
+            <img alt="Hemp Squeeze Logo" src="/hempsqueeze/Hempsqueeze-logo.png" class="img-fluid"/>
+            <img alt="Hemp Squeeze" src="/hempsqueeze/HempsqueezeTM.png" class="img-fluid"/>
+        </div>
+        <div class="hs-links col-md-6 d-none d-lg-inline">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#hs-plants">Our Products</a></li>
+                <li><a href="https://foundershemp.com/about/" target="_blank">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <div id="hs-plants">
+        <div class="row">
+        <div class="hs-left-30 col-md-5">
+            <h1>NEW</h1>
+        </div>
+        <div class="hs-right-50 col-md-7">
+            <h2>CBD INFUSED<br>COMPRESSION SLEEVE</h2>
+            <h3>150mg CBD | THC Free</h3>
+        </div></div>
+    </div>
+    <div id="hs-products">
+        <div class="hs-products row">
+            <div class="col-6 col-md-3"><img alt="Arm Sleeve" src="/hempsqueeze/arm.png" class="img-fluid"/></div>
+            <div class="hs-center d-none d-md-block col-md-6">
+                <div class="hs-center-top">
+                    <h2 class="hs-button">ARM</h2>
+                    <h2 class="hs-button">KNEE</h2>
+                </div>
+                <div class="hs-center-bottom">
+                    <h2 class="hs-products-h2">100% USA GROWN</h2> 
+                    <h2 class="hs-products-light">HEMP EXTRACT</h2>
+                         
+                </div>
+            </div>
+            <div class="col-6 col-md-3"><img alt="Leg Sleeve" src="hempsqueeze/knee.png" class="img-fluid"/></div>
+        </div>
+        <div class="col-12"><h2 class="hs-button hs-coming-soon">COMING SOON!</h2> </div>
+    </div>
+    
+           
+    
+        
+    <div id="hs-natural">
+        
+        <div class="row justify-content-center">
+            <div class="col-sm-6 hs-natural-left">
+                <img alt="runner" src="/hempsqueeze/runner.png" class="img-fluid"/>
+            </div>
+            <div class="col-sm-6 hs-natural-right">
+                <h2>The Natural Choice for<br>a Healthy Lifestyle</h2>
+                <p><strong>HOW IT WORKS:</strong><br>The Sleeve is made with Nufabrx technology, a patented, proprietary biomaterial platform that embeds CBD (THC FREE) into the actual yarn of the sleeve.</p>
+            </div>
+        </div>
+    </div>
+    <div id="hs-life">
+        <h1>LIFE HURTS, HEMP HELPS!</h1>
+        <div class="hs-life-flex row">
+            <div class="hs-life-left">
+                <p><strong>BENEFITS:</strong><br>The Hemp Squeeze Sleeve provides support, improved
+                circulation, and zoned compression with the benefits of 150mg active CBD that 
+            remain effective after multiple (up to 25) washes.</p>
+            </div>
+            <div class="hs-life-right">
+                <img alt="Mountain Bikers" src="hempsqueeze/bikers.png"/>
+            </div>
+        </div>
+    </div>
+    <div id="hs-infused">
+            <h2>Infused with hemp extract, including 150 mg of CBD and other beneficial cannabinoids (THC Free).</h2>
+        
+    </div>
+
+    <div id="hs-about" class="row">
+        <div class="col-md-3"><a href="https://everythinghempstore.com/hemp-and-the-human-body/" target="_blank"><div class="hs-about-circle1"><h2>HEMP<br>AND THE<br>HUMAN<br>BODY</h2></div></a></div>
+        <div class="col-md-3"><div class="hs-about-circle2"> <img alt="Leg Sleeve" src="/hempsqueeze/leg group.png"></div></div>
+        <div class="col-md-3"><a href="https://foundershemp.com/history-of-hemp/" target="_blank"><div class="hs-about-circle3"><h2>HISTORY<br>OF<br>HEMP</h2></div></a></div>
+    </div>
+    <div id="footer" style="height: auto; padding: 40px 0;">
+        <div class="gdlr-core-text-box-item-content" style="color: #2b7844;"><h2 style="font-size: 60px;">Join Our Mailing List</h2>
+            <p style="font-size: 1.3em;">Stay on top of the latest news about Hemp Squeeze.</p>
+            
+            <form method='post' id='gform_1'  action='/formmail.asp'>
+            		<input type="hidden" name="to_email" value="info@hempsqueeze.com" />
+		            <input type="hidden" name="subject" value="New Hemp Squeeze Mailing List Contact">
+		            <input type="hidden" name="key" value="zxcvbnm">
+		            <input type="hidden" name="redirect" value="/thankyou.htm">
+                <input type="email" name="EMAIL" placeholder="Your email address" required="" style="display: block; border: 1px solid #d7d7d7; margin: 0 auto;">
+              
+              <br/><br/>
+                <input type="submit" value="Subscribe" style="display: block; border: 1px solid #d7d7d7; margin: 0 auto; font-size: 1em;">
+            
+            </form>
+            
+             
+            </div></div><label style="display: none !important;">Leave this field empty if you're human: <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off"></label><input type="hidden" name="_mc4wp_timestamp" value="1574822277"><input type="hidden" name="_mc4wp_form_id" value="2954"><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1"><div class="mc4wp-response"></div></form><!-- / MailChimp for WordPress Plugin -->
+            </div>
+    </div>
+    <script>
+        var header = document.querySelector(".hs-nav");
+        window.onscroll = function(){navFunction()};
+        function navFunction(){
+            if(window.pageYOffset > 1){
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        
+        }}
+        
+    </script>
+</body>
+</html>
