@@ -13,7 +13,7 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
- 
+
   gtag('config', 'UA-153865859-1');
 </script>
     <!-- Martin Analytics Global site tag (gtag.js) - Google Analytics -->
@@ -32,7 +32,7 @@
             font-family: 'AvenirNext';
             src: url('hempsqueeze/AvenirNextLTPro-Regular.otf');
         }
-        
+
         body{padding: 0; margin: 0; font-family: AvenirNext, sans-serif;}
         .hs-nav{
             width:100%;
@@ -55,7 +55,7 @@
             color: black;
             font-size: 1.2em;
             font-weight: bold;
-            
+
         }
         .hs-logo{
             /* padding-left: 10%; */
@@ -77,7 +77,7 @@
             background-position: center;
             color: white;
             text-shadow: 2px 2px 4px #000000;
-    
+
         }
         #hs-plants .row {width: 100%}
         #hs-plants h1, #hs-plants h2, #hs-plants h3{ text-shadow: 2px 2px 4px #000000;}
@@ -157,7 +157,7 @@
             flex-direction: row;
             justify-content: space-between;
             width: 100%;
-        }        
+        }
         .hs-center-bottom {
             display: flex;
             flex-direction: column;
@@ -167,8 +167,11 @@
         .hs-products-h2{font-size: 3em;font-weight: 900}
         .hs-products-light {font-size: 3em;font-weight:300;text-align: center;}
         .sticky {position: fixed; top:0}
-        .hs-coming-soon {display: flex; justify-content: center;}
+        .hs-coming-soon, .hs-shop-now {display: flex; justify-content: center;}
         .hs-coming-soon h2 {transform: translateY(73px)}
+        .hs-shop-now {display: block; max-width: 600px; background-color: white}
+         h2.hs-shop-now {text-align: center; margin: 0 auto; color: #1b4f9a; font-size: 2rem!important;}
+         .d-flex a {text-decoration: none;}
         .hs-natural-flex, .hs-life-flex { justify-content: center; }
 
         .hs-natural-left img {max-height: 300px; border: 5px solid white}
@@ -198,7 +201,7 @@
         #hs-about.row {margin: 0; }
         #footer{display: flex; flex-direction:column; justify-content: center;
         align-items:center;
-        background-image: url(https://everythinghempstore.com/wp-content/plugins/goodlayers-core/include/images/pattern/pattern-8.png); 
+        background-image: url(https://everythinghempstore.com/wp-content/plugins/goodlayers-core/include/images/pattern/pattern-8.png);
         background-repeat: repeat;
         background-position: center center;
         opacity: 1;
@@ -212,7 +215,7 @@
             color: #4e4e4e;
             padding: 20px 10px;
             text-transform:uppercase;
-            text-align:center; 
+            text-align:center;
             width: 360px;
         }
         #footer input[type="submit"] {
@@ -234,19 +237,20 @@
             #hs-life h1 {font-size: 2.5em;}
 
         }
-        
+
         @media only screen and (max-width: 768px){
             #hs-plants {height: 380px;}
             #hs-plants *, #hs-plants h1 {text-align: center;}
             #hs-products img {height: auto; transform:translateY(0); margin-bottom: 20px;}
             #hs-products img:nth-of-type(2){ transform:translateX(-100px);}
-            
+
             .leg-sleeve {transform: translateX(-25px);}
             #hs-plants h2 {font-size: 2em;}
             #hs-plants h1{margin: 0; text-align: center;}
         }
         @media (max-width: 450px){.leg-sleeve {transform: translateX(0);}.hs-coming-soon{width: 200px}
-        .hs-nav-row {width: 75%}}
+        .hs-nav-row {width: 75%}h2{font-size: 1.8em!important;} .hs-natural-left{padding-right: 35px;} .hs-natural-right{padding-right:25px}
+        .hs-life-left {padding: 0 15px;}  #hs-life {padding-right: 40px;}}
         @media (min-width: 768px) and (max-width: 1150px){
             .hs-about-circle1, .hs-about-circle2, .hs-about-circle3 {
             height: 200px;
@@ -288,21 +292,21 @@
                     <h2 class="hs-button">KNEE</h2>
                 </div>
                 <div class="hs-center-bottom">
-                    <h2 class="hs-products-h2">100% USA GROWN</h2> 
+                    <h2 class="hs-products-h2">100% USA GROWN</h2>
                     <h2 class="hs-products-light">HEMP EXTRACT</h2>
-                         
+
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-3 leg-sleeve"><img alt="Leg Sleeve" src="hempsqueeze/knee.png" class="img-fluid leg-sleeve"/></div>
         </div>
-        <div class="col-12"><h2 class="hs-button hs-coming-soon">COMING SOON!</h2> </div>
+        <div class="col-12"><a href="https://everythinghempstore.com/category/apparel/" target="_blank"><h2 class="hs-button hs-coming-soon">SHOP NOW!</h2></a> </div>
     </div>
-    
-           
-    
-        
+
+
+
+
     <div id="hs-natural">
-        
+
         <div class="row justify-content-center">
             <div class="col-sm-6 hs-natural-left">
                 <img alt="runner" src="/hempsqueeze/runner.png" class="img-fluid"/>
@@ -318,17 +322,19 @@
         <div class="hs-life-flex row">
             <div class="hs-life-left">
                 <p><strong>BENEFITS:</strong><br>The Hemp Squeeze Sleeve provides support, improved
-                circulation, and zoned compression with the benefits of 150mg active CBD that 
+                circulation, and zoned compression with the benefits of 150mg active CBD that
             remain effective after multiple (up to 25) washes.</p>
             </div>
+            
             <div class="hs-life-right">
                 <img class="img-fluid" alt="Mountain Bikers" src="hempsqueeze/bikers.png"/>
             </div>
+            <div class="col-12 d-flex justify-content-center mb-3"><a href="https://everythinghempstore.com/category/apparel/" target="_blank"><h2 class="hs-button hs-shop-now">SHOP NOW!</h2></a> </div>
         </div>
     </div>
     <div id="hs-infused">
             <h2>Infused with hemp extract, including 150 mg of CBD and other beneficial cannabinoids (THC Free).</h2>
-        
+
     </div>
 
     <div id="hs-about" class="row">
@@ -336,23 +342,25 @@
         <div class="col-md-3"><div class="hs-about-circle2"> <img alt="Leg Sleeve" src="/hempsqueeze/leg group.png"></div></div>
         <div class="col-md-3"><a href="https://foundershemp.com/history-of-hemp/" target="_blank"><div class="hs-about-circle3"><h2>HISTORY<br>OF<br>HEMP</h2></div></a></div>
     </div>
+
     <div id="footer" style="height: auto; padding: 40px 0;">
+
         <div class="gdlr-core-text-box-item-content" style="color: #2b7844;"><h2 style="font-size: 60px;">Join Our Mailing List</h2>
             <p style="font-size: 1.3em;">Stay on top of the latest news about Hemp Squeeze.</p>
-            
+
             <form method='post' id='gform_1'  action='/formmail.asp'>
             		<input type="hidden" name="to_email" value="info@hempsqueeze.com" />
 		            <input type="hidden" name="subject" value="New Hemp Squeeze Mailing List Contact">
 		            <input type="hidden" name="key" value="zxcvbnm">
 		            <input type="hidden" name="redirect" value="/thankyou.htm">
                 <input type="email" name="EMAIL" placeholder="Your email address" required="" style="display: block; border: 1px solid #d7d7d7; margin: 0 auto;">
-              
+
               <br/><br/>
                 <input type="submit" value="Subscribe" style="display: block; border: 1px solid #d7d7d7; margin: 0 auto; font-size: 1em;">
-            
+
             </form>
-            
-             
+
+
             </div></div><label style="display: none !important;">Leave this field empty if you're human: <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off"></label><input type="hidden" name="_mc4wp_timestamp" value="1574822277"><input type="hidden" name="_mc4wp_form_id" value="2954"><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1"><div class="mc4wp-response"></div></form><!-- / MailChimp for WordPress Plugin -->
             </div>
     </div>
@@ -364,9 +372,9 @@
             header.classList.add("sticky");
         } else {
             header.classList.remove("sticky");
-        
+
         }}
-        
+
     </script>
 </body>
 </html>
